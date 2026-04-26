@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    Kin
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
+<meta name="author" content="Kamto">
+<meta name="description" content="Never put off what you can do today until tomorrow.">
+<meta name="keywords" content="">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://jtaozou.github.io/styles/main.css" />
+<link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://fastly.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://jtaozou.github.io">
+                    Kin
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1777219348051" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://jtaozou.github.io">
+                            Kin
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1777219348051" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                预面试内容
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            Kin
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2026-04-10</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">9.9
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">2816</a></span>
+                                        
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <p>一、自我介绍：基本信息 + 大学 学历 专业 + 工作经历 + 简单的工作职责 + 总结工作成果</p>
+<p>面试官，您好！我叫邹金涛，我今天面试的岗位是贵公司的嵌入式软件开发；<br>
+本人本科就读于广州大学，工科-物联网工程专业；<br>
+目前有两年的软件开发工作经验，工作内容主要是显示器/监视器软件开发、维护和迭代；<br>
+本人开发过多个品牌的显示器（如技嘉、联想、PIXIO、KTC及夏普、优派监视器）和中性软件并实现量产，有比较丰富的显示器开发调试经验，与贵公司该岗位的要求比较匹配。<br>
+好，以上就是我简单的自我介绍。</p>
+<p>二、项目经历介绍：<mark>情景-&gt;任务-&gt;过程-&gt;结果</mark><br>
+//1、先以 简历上的 技嘉项目 介绍项目的任务 ：分点介绍项目功能 及 重难点（如何解决的过程，体现思维和学习进步的过程）</p>
+<p>这个项目的产品是一款2K 240Hz（后续超频到2K 275Hz）的高刷电竞游戏显示器，基于MTK9800 这一种主流显示器 芯片方案进行开发，前期工作主要是软硬件联调 适配 新板卡、新屏，根据硬件提供的调试文档 电路原理图 和 芯片手册 配置IO口、SAR口、PWM这些板参配置</p>
+<p>中期工作主要是按照客户提供的OSD Tree去绘制OSD菜单、弹窗，导入LOGO、字库 字符数据，翻译菜单语言、写入EDID数据，并对菜单上各个具体功能进行开发，这些功能包括图像色彩设置功能（有情景模式对比度、动态对比度、gamma、暗部平衡、HDR、MPRT等）、音频功能（有喇叭、耳机功能）、游戏设置（有动态刷新率FreeSync、电竞缩放模式、鹰眼等功能），</p>
+<p>//2、衍生其它重要项目（如9800监视器 夏普 优派、联想、PIXIO、9802KTC）/技能；以及重点突出自己在解决兼容性问题的经验和优势）的重难点 以及体现 开发多个显示器/监视器项目的经历，增加工项目记录的丰富度</p>
+<p>除了简历上这个项目外，本人也有其它的项目经验和技能，如9800监视器、显示器超频（屏规格刷新率超上限，一般需要修改屏参和EDID，适当降低EDID Timing的像素时钟）功能、多窗口画中画、画外画功能等；</p>
+<p>也比较熟悉解决显示器花屏、闪屏、黑屏、信号EQ失败等兼容性问题。</p>
+<p><mark>项目过程遇到的难点</mark>：</p>
+<p>问题描述：切换分辨率时，信号有低概率EQ失败；难点：低概率bug、时间紧、马上要量产、原厂无法在短时间内提供软件对策；<br>
+最后通过排查和对比正常 异常情况的打印信息，定位到 信号EQ稳定性判断的函数 返回失败。导致EQ失败，关闭打印时发现概率降低。尝试从延时入手，给函数判断增加延时60ms，最后验证成功。</p>
+<p>遮黑时仍操作菜单 导致在画菜单处理函数里面 又有一个指针访问越界，非法访问导致软件卡死。</p>
+<p>三、最后总结：工作经历和贵公司该岗位的要求匹配度还是比较高的。</p>
+<p>四、反问：研发团队规模、薪资结构、岗位晋升制度； 表达意向、优先考虑</p>
+<p>可能问的问题点</p>
+<p>1、DDC就是建立在I2C物理层上的协议，用于主机读取显示器的EDID<br>
+2、FreeSync：<br>
+游戏场景：动态调整刷新率匹配帧率，消除撕裂同时降低延迟；<br>
+3、MPRT用于显著降低动态模糊，提高运动图像清晰度；<br>
+4、<mark>HDMIRx接收&gt;解扰/解码&gt;颜色空间转换&gt;缩放引擎&gt;帧率转换/运动补偿&gt;LVDS/eDP Tx输出</mark><br>
+花屏：检查输入源、检查DDR带宽、检查LVDS/eDP链路、EDIDtiming是否规范填写等<br>
+5、DCR技术的实现原理可以概括为三个步骤：</p>
+<p>画面分析：显示器内置芯片实时捕捉输入信号的亮度分布特征，判断当前场景是暗场还是亮场</p>
+<p>动态调节：</p>
+<p>检测到大量暗部细节时：降低背光输出功率，同时调整液晶分子偏转角度，让黑色更纯正</p>
+<p>检测到高光占比时：提升整体背光亮度，让亮部细节更通透；‘</p>
+<p>6、面试要求</p>
+<figure data-type="image" tabindex="1"><img src="%E9%A2%84%E9%9D%A2%E8%AF%95.assets/image-20260404191240939-1775301188853-3.png" alt="image-20260404191240939" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="%E9%A2%84%E9%9D%A2%E8%AF%95.assets/image-20260404191249378-1775301178880-1.png" alt="image-20260404191249378" loading="lazy"></figure>
+<p>离职原因：</p>
+<p>1)在公司积累了不少经验，也做出了一些成绩，但是公司的薪酬体系和我的职业成长不太匹配，再加上过去一年公司其他部门效益不好影响到了我们部门，工资有所下降，希望去到更有发展空间的平台；</p>
+<p>7、液晶种类：TN、VA、<mark>IPS</mark>(主流显示器)<br>
+特点：<br>
+三个方面：可视角度、色彩还原、响应速度<br>
+IPS：可视角度广、色彩还原真实、色准高、响应速度较快，可覆盖颜色多、不易变形；但漏光较严重；<br>
+TN屏就只有响应速度快这一个有点，其它像色彩还原、可视角度较差；<br>
+VA屏在这三个方面都比较中等。</p>
+<p>劣：响应慢、漏光<br>
+8、miniLED特点<br>
+优点：尺寸小、分区多、明暗分明、高亮度、低漏光、HDR效果好<br>
+9、新屏适配需要什么？<br>
+屏规格书（用于确认屏接口类型、屏时序要求、分辨率刷新率等屏参信息，还有尺寸、面板材料等基础信息）<br>
+<mark>芯片规格书</mark>（用于确认HDMI、DP接口规格，且不同屏接口类型，芯片对最高刷新率的支持会不一样。）</p>
+<p>10、MPRTSync功能实现（不闪原理）<br>
+1）MPRT 和 FreeSync 的冲突点<br>
+MPRT（背光闪烁）：通过 开关背光 减少运动模糊，每帧背光可能闪烁多次或占空比降低。<br>
+FreeSync（可变刷新率）：显示器的刷新率会随 GPU 输出帧率动态调整，不固定。<br>
+冲突：<br>
+MPRT 的背光闪烁是基于固定帧时间设计的，占空比和闪烁周期通常与刷新率同步。<br>
+FreeSync 让每帧时长不固定，如果闪烁仍按固定周期，可能出现画面闪烁的情况。</p>
+<ol>
+<li>BL_ADJ_PWM + VSync<br>
+VSync（帧同步信号）：标记每帧刷新开始的时刻。<br>
+BL_ADJ_PWM：本来是亮度微调信号，<mark>让它根据 VSync 计数或定时调节占空比</mark>，就能实现：<br>
+<mark>背光闪烁严格与帧同步</mark>，即便刷新率变化也能正确对齐每帧。<br>
+动态调整 MPRT 的开关背光时间，保证 FreeSync 下每帧的运动模糊都可控且不闪烁。</li>
+</ol>
+<p>简化逻辑：<br>
+VSync 检测每帧起点。<br>
+背光根据 BL_ADJ_PWM 信号的占空比调节背光亮度，同时参考帧起点。<br>
+MPRT 背光闪烁周期随FreeSync刷新率变化动态调整。</p>
+<p>11、SPI VSync<br>
+使用 SPI 接口传送 Local Dimming 数据，并通过 VSync 信号触发数据更新，与显示器刷新严格同步。</p>
+<p>12、画UI流程<br>
+画菜单：大致就是load色盘、UI font，这个font一般是使用mtk的工具导入UI icon去生成的，然后使用画font函数去画出这个font<br>
+画字符串：在draw菜单先进行按页加载字符串font，再调用函数画出每个字符串font</p>
+<p>13、信号流程<br>
+1）首先是<mark>信号源生成</mark>，由主机系统或显卡输出 包含分辨率、刷新率、颜色格式、色深、缩放等信息的帧数据，这里的可选分辨率、刷新率 是由显示器的EDID数据决定的；<br>
+2）然后是<mark>输出接口传输</mark>，帧数据转换成数字信号或模拟信号，在这个过程中=信号可能会被进行加密==（如苹果设备 HDCP加密），每帧数据会被分成 行扫描信号；<br>
+3）然后是<mark>显示器接收帧数据</mark>，将数据存到frame buffer帧缓存里面，解析数据里的分辨率、刷新率、颜色格式、颜色范围、色深等，然后进行亮度、Gamma等色彩校正；<br>
+4）最后是<mark>显示器屏幕扫描，刷新输出</mark>，一般是逐行扫描点亮像素点，当然也有i信号隔行扫描的，这样就完成了一帧的显示。刷新率会决定每秒显示多少帧，每帧信号的显示大致都是按照以上流程去完成的。</p>
+<p>14、中断类型<br>
+内部中断：定时器中断<br>
+外部中断：网络唤醒开机中断信号是检测IO口电平、按键中断</p>
+<p>15、关键字<br>
+volatile、static、const</p>
+<p>volatite：1）提醒编译器，其修饰的变量随时可能改变。因此编译后的程序每次需要存储或者读取时，都会直接从变量地址中读取数据；如果没有该关键字，则编译器可能优化读取和存储，如果这个变量被中断修改时，会出现读取到旧值的情况。2）硬件寄存器<br>
+static：1）函数内，其修饰的变量只会被初始化一次，且具有记忆功能，会保留上一次函数调用的值；2）函数外模块内，只能被模块内函数访问，相当于本地全局变量；3）模块内，修饰函数，这个函数只能被限制在模块内当前文件使用。<br>
+const：1）定义变量为常量、修饰常数组；2）修饰函数的返回值，如果返回的是指针，其指针的内容不能被修改；3）节省空间</p>
+<p>16、指针<br>
+1）指针访问越界，如数组名偏移地址访问越界</p>
+<p>17、I2C和SPI、UART通信协议<br>
+I2C<br>
+特点：串行 同步 半双工 多主多从，速率较快（最高能到3.4MHz）；两根线组成，时钟线SCL、数据线SDA；两线接口简化硬件设计。适用于传感器、HDMI外挂eeprom存放edid.<br>
+起始信号：时钟线高电平，数据线由高-&gt;低<br>
+结束信号：时钟线低电平，数据线由低-&gt;高<br>
+必须外接上拉电阻的原因：开漏输出，必须要接上拉电阻</p>
+<p>SPI<br>
+特点：串行、同步、全双工、一主多从，高速（高达10MHz）；通常由四根线组成时钟线SCLK、片选CS、主出从入MOSI、主入从出MISO，LD还有一个VSync信号；适用于LD分区调光、USB升级使用</p>
+<p>UART<br>
+特点：无时钟线，异步；通过预设波特率和数据帧格式来实现接发；有RX、TX、GND；通信简单，但是速率慢。<br>
+接受方检测到起始位的下降来启动自己的时钟并开始按位接收数据<br>
+数据帧格式：起始位、数据位、奇偶校验位、停止位<br>
+如打印信息、MCU和SOC通信、232通信</p>
+<p>RS232<br>
+9针串行口</p>
+<p>18、CEC<br>
+特点：串行、单总线、半双工、异步<br>
+CEC帧有起始位、8位头部、0-16字节的操作码、结束位</p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                
+                            </div>
+                            
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>Kin</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://jtaozou.github.io/post/yu-mian-shi-nei-rong/">https://jtaozou.github.io/post/yu-mian-shi-nei-rong/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://jtaozou.github.io/post/yu-mian-shi-nei-rong/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://jtaozou.github.io/post/yu-mian-shi-nei-rong/&sharesource=qzone&title=预面试内容&pics=https://jtaozou.github.io/images/avatar.png?v=1777219348051&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://jtaozou.github.io/post/yu-mian-shi-nei-rong/&sharesource=weibo&title=预面试内容 + " - " + &pic="https://jtaozou.github.io/images/avatar.png?v=1777219348051 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://jtaozou.github.io/post/hello-gridea/">
+                                                                                                    Hello Gridea
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        Kin &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://fastly.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1777219348051);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>
